@@ -1,0 +1,60 @@
+<?php
+
+if(!empty($_POST)){
+    registrar($_POST);
+
+    header('Location: http://localhost:8000/Gabriel_Salazar/Taller.php');
+    exit();
+}
+
+function registrar( array $post){
+
+    if(empty($post))
+        return
+
+    $archivo = fopen('./directory', 'r+');
+    fseek($archivo, 0, SEEK_END);
+    fwrite($archivo, json_encode($post).'-');
+    fclose($archivo);
+}
+
+function lectura(){
+
+    $archivo = fopen('./directory', 'r+');
+    $registros = fread($archivo, filesize('./directory'));
+    fclose($archivo);
+    $valores = empty($registros) ? $registros : explode("-", $registros);
+
+    return $valores;
+}
+
+function printTable()
+{
+    $registros = lectura();
+    if (!empty($registros)){
+        ?>
+        <table border="1">
+            <thead>
+            <tr>
+                <th>Nombre</th>
+                <th>Edad</th>
+                <th>Correo</th>
+                <th>Telf</th>
+            </tr>
+            </thead>
+            <tbody>
+            <?php foreach($registros as $valor){ ?>
+                <?php $valor = json_decode($valor); ?>
+                <tr>
+                    <td> <?php echo $valor->nombre ?></td>
+                    <td> <?php echo $valor->edad ?></td>
+                    <td> <?php echo $valor->correo ?></td>
+                    <td> <?php echo $valor->telf ?></td>
+                </tr>
+            <?php } ?>
+            </tbody>
+        </table>
+        <?php
+    }
+}
+?>
