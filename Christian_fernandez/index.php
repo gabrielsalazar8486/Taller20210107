@@ -1,4 +1,4 @@
-<?phphttp://www.google.com/
+<?php
 
 echo 'gabriel es tarado';
 class index
