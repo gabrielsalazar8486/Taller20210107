@@ -12,6 +12,12 @@ final class ControllerRegister
         $this->file = './directorio';
     }
 
+    public function buscar()
+    {
+        if (!empty($this->datos))
+            $this->filtrar_registro();
+    }
+
     public function getDirectorio(): array
     {
 
@@ -35,5 +41,10 @@ final class ControllerRegister
     {
         $result = !empty($json_directory) ? explode('--', $json_directory) : [];
         return array_filter($result);
+    }
+
+    protected function filtrar_registro()
+    {
+        $datos = $this->datos;
     }
 }

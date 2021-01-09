@@ -12,7 +12,7 @@
                     </div>
                     <div class="col-3">
                         <br>
-                        <button type="submit" class="btn btn-primary btn-lg">Buscar</button>
+                        <button type="submit" class="btn btn-primary btn-lg" value="buscar">Buscar</button>
                     </div>
                 </div>
             </form>
