@@ -1,0 +1,13 @@
+{
+    "name": "medine/taller20210107",
+    "license": "MIT",
+    "require": {
+        "phpunit/phpunit": "^9.5"
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Taller\\": "src",
+            "Test\\": "tests"
+        }
+    }
+}
