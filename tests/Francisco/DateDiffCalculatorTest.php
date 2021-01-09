@@ -15,8 +15,8 @@ final class DateDiffCalculatorTest extends TestCase
      */
     public function try_diff_two_dates_and_get_result_on_days()
     {
-        $dateOne = new \DateTimeImmutable();
-        $dateTwo = new \DateTimeImmutable();
+        $dateOne = new \DateTimeImmutable('2021-01-08 00:00:00');
+        $dateTwo = new \DateTimeImmutable('2021-01-18 00:00:00');
         $calculator = new DateDiffCalculator($dateOne, $dateTwo);
         $diff = $calculator->diffOnDays();
 
@@ -28,8 +28,8 @@ final class DateDiffCalculatorTest extends TestCase
      */
     public function try_diff_two_dates_and_get_result_on_months()
     {
-        $dateOne = new \DateTimeImmutable();
-        $dateTwo = new \DateTimeImmutable();
+        $dateOne = new \DateTimeImmutable('2021-01-08 00:00:00');
+        $dateTwo = new \DateTimeImmutable('2022-01-08 00:00:00');
         $calculator = new DateDiffCalculator($dateOne, $dateTwo);
         $diff = $calculator->diffOnMonths();
 
