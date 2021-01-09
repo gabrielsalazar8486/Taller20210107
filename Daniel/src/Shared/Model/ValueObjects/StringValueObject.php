@@ -2,6 +2,8 @@
 
 declare(strict_types=1);
 
+namespace Assistant\Shared\ValueObjects;
+
 final class StringValueObject
 {
     private $text;
@@ -14,7 +16,7 @@ final class StringValueObject
     public function value()
     {
         if (empty($this->text))
-            throw new InvalidArgumentException("El texto no puede estar vacio");
+            throw new \InvalidArgumentException("El texto no puede estar vacio");
 
         return $this->text;
     }
