@@ -2,19 +2,21 @@
 
 declare(strict_types=1);
 
-//namespace Taller\Daniel\app\AssistantController;
+require __DIR__.'/../../vendor/autoload.php';
 
-use Taller\Daniel\Assistant\Application\AssistantResponder;
-use Taller\Daniel\Shared\Domain\ValueObjects\StringValueObject;
+use App\Assistant\Application\AssistantResponder;
+use App\Shared\Domain\ValueObjects\StringValueObject;
 
-$response = '';
 try{
     $message = new StringValueObject($_POST['message']);
     $assistantResponder = new AssistantResponder();
     $response = $assistantResponder->__invoke($message);
-}catch (\Exception $e) {
-    $response .= $e->getMessage();
+}catch (InvalidArgumentException $e) {
+    $response = $e->getMessage();
 }
 
+$response = [
+    'message'   => $response
+];
 
 echo json_encode($response);

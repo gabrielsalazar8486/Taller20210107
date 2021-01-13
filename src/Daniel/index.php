@@ -1,6 +1,3 @@
-<?php
-    require __DIR__.'/../../vendor/autoload.php';
-?>
 <!doctype html>
 <html lang="en">
     <head>
@@ -16,6 +13,8 @@
             <label for="">Escriba un texto cualquiera</label>
             <input type="text" name="message" id="message" required="true">
             <br>
+
+            <p id="response" hidden></p>
 
             <input type="submit" id="submit">
         </form>

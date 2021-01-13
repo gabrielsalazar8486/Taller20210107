@@ -2,10 +2,10 @@
 
 declare(strict_types=1);
 
-namespace Taller\Daniel\Assistant\Application;
+namespace App\Assistant\Application;
 
-use Taller\Daniel\Assistant\Domain\Assistant;
-use Taller\Daniel\Shared\Domain\ValueObjects\StringValueObject;
+use App\Assistant\Domain\Assistant;
+use App\Shared\Domain\ValueObjects\StringValueObject;
 
 final class AssistantResponder
 {

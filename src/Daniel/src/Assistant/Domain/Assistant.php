@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace Taller\Daniel\Assistant\Domain;
+namespace App\Assistant\Domain;
 
-use Taller\Daniel\Dictionary\Domain\Dictionary;
+use App\Dictionary\Domain\Dictionary;
 
 final class Assistant
 {

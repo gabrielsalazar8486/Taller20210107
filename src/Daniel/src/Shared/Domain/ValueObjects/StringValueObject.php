@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Taller\Daniel\Shared\Domain\ValueObjects;
+namespace App\Shared\Domain\ValueObjects;
 
 final class StringValueObject
 {

@@ -1,0 +1,17 @@
+{
+    "name": "mnonline03/daniel",
+    "authors": [
+        {
+            "name": "Daniel Marcano",
+            "email": "dmarcanor2@gmail.com"
+        }
+    ],
+    "require": {
+        "ext-json": "*"
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "App\\": "./src"
+        }
+    }
+}

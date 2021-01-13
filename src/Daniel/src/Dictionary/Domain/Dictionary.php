@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Taller\Daniel\Dictionary\Domain;
+namespace App\Dictionary\Domain;
 
 final class Dictionary
 {

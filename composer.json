@@ -2,7 +2,8 @@
     "name": "medine/taller20210107",
     "license": "MIT",
     "require": {
-        "phpunit/phpunit": "^9.5"
+        "phpunit/phpunit": "^9.5",
+        "ext-json": "*"
     },
     "autoload-dev": {
         "psr-4": {

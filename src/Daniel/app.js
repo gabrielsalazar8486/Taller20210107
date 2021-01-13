@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", function(event) {
-    let submit = document.getElementById('submit');
+    let responseBlock = document.getElementById('response');
     let form = document.getElementById('form');
 
     form.addEventListener('submit', function (event) {
@@ -7,9 +7,8 @@ document.addEventListener("DOMContentLoaded", function(event) {
 
         axios.post(window.location.href + 'app/AssistantController/AssistantGetController.php', new FormData(form))
             .then(response => {
-                let text = document.createElement('p');
-                text.innerHTML = response.data.message;
-                submit.before(text);
+                responseBlock.hidden = false;
+                responseBlock.innerHTML = response.data.message;
             })
             .catch(error => console.log(error))
     })
