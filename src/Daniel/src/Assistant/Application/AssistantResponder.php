@@ -14,8 +14,6 @@ final class AssistantResponder
     public function __construct()
     {
         $this->assistant    = new Assistant();
-        print_r($_POST);
-        exit();
     }
 
     public function __invoke(StringValueObject $message): string
