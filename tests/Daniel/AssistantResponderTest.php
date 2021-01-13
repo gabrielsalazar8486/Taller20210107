@@ -4,10 +4,11 @@ declare(strict_types=1);
 
 namespace Test\Daniel;
 
+use App\Assistant\Application\AssistantResponder;
+use App\Assistant\Domain\Assistant;
+use App\Shared\Domain\ValueObjects\StringValueObject;
 use PHPUnit\Framework\TestCase;
-use Taller\Daniel\Assistant\Application\AssistantResponder;
-use Taller\Daniel\Assistant\Domain\Assistant;
-use Taller\Daniel\Shared\Domain\ValueObjects\StringValueObject;
+
 
 final class AssistantResponderTest extends TestCase
 {
